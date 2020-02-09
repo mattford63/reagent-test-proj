@@ -1,0 +1,13 @@
+/target
+/classes
+/checkouts
+*.jar
+*.class
+/.lein-*
+/.nrepl-port
+/out
+/.repl
+*.log
+/.env
+/.sass-cache
+/.cljs_nashorn_repl
