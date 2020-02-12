@@ -40,7 +40,10 @@
       ["" {:get {:handler index-handler}}]
       ["/:item-id" {:get {:handler index-handler
                           :parameters {:path {:item-id int?}}}}]]
-     ["/about" {:get {:handler index-handler}}]])
+     ["/about" {:get {:handler index-handler}}]
+     ["/mf" {:get {:handler (fn [_request] {:status 200
+                                            :headers {"Content-Type" "text/html"}
+                                            :body "<h1>BOO!</h1>"})}}]])
    (reitit-ring/routes
     (reitit-ring/create-resource-handler {:path "/" :root "/public"})
     (reitit-ring/create-default-handler))
